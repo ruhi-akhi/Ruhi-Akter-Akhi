@@ -6,7 +6,7 @@ const projects = [
         description: 'A modern, responsive portfolio website showcasing creative design and smooth animations. Built with attention to user experience and visual appeal, featuring interactive elements and professional presentation.',
         tags: ['React', 'CSS3', 'JavaScript', 'Responsive Design'],
         image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop',
-        link: 'https://wondrous-treacle-6f0d09.netlify.app/',
+        link: 'https://smartlms-pro.vercel.app',
         github: 'https://github.com/akhiakter25556'
     },
     {
@@ -14,17 +14,25 @@ const projects = [
         description: 'A comprehensive skills development platform where users can learn, practice, and showcase their abilities. Features interactive learning modules, progress tracking, and skill assessments.',
         tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
         image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-        link: 'https://skills-hub-murex.vercel.app/',
+        link: 'https://contesthub-omega.vercel.app/',
         github: 'https://github.com/akhiakter25556'
     },
     {
-        title: 'Assignment Management System',
+        title: 'Intern Govt project ',
         description: 'A complete assignment management system for educational institutions. Features assignment creation, submission tracking, grading system, and student-teacher collaboration tools.',
         tags: ['React', 'Firebase', 'Material-UI', 'Authentication'],
         image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop',
-        link: 'https://assainment9.vercel.app/',
-        github: 'https://github.com/akhiakter25556'
+        link: 'https://ictd-lab-gsi-project-frontend.vercel.app/',
+        github: 'https://github.com/akhiakter25556/assignment-management'
     },
+ {
+    title: 'Client Project , Full Stack TypeScript App',
+    description: 'Successfully delivered a full-stack web application for a client on a project basis. Built with React.js and Next.js with TypeScript for structured and maintainable code. The project focused on creating a clean, responsive UI, smooth user experience, and optimized performance. The client was extremely satisfied with the final results.',
+    tags: ['FullStack', 'TypeScript', 'ReactJS', 'NextJS', 'WebDevelopment', 'ClientProject'],
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop',
+    link: 'https://vizualgraphics.vercel.app/',
+    github: 'https://github.com/akhiakter25556/vizualgraphics.git'
+},
     {
         title: 'E-Commerce Platform',
         description: 'Full-stack e-commerce solution with user authentication, payment integration, and admin dashboard. Features include product management, order tracking, shopping cart, and secure checkout process.',
@@ -33,6 +41,14 @@ const projects = [
         link: 'https://e-commerch-client.vercel.app/',
         github: 'https://github.com/akhiakter25556'
     },
+ {
+  title: 'Smart Inventory & Order Management System',
+  description: 'Built a Smart Inventory & Order Management System using TypeScript, Node.js, and Next.js. Manage products, categories, stock levels, and customer orders with proper validation and workflow handling.',
+  tags: ['Next.js', 'Node.js', 'TypeScript', 'MongoDB', 'Full-Stack'],
+  image: 'https://images.unsplash.com/photo-1581091012184-7f92e56b7e97?w=400&h=300&fit=crop',
+  link: 'https://l-msystemproject-92x9.vercel.app/',
+  github: 'https://github.com/akhiakter25556/LMsystemproject.git'
+},
     {
         title: 'Frangipane Creative Website',
         description: 'A beautifully designed creative website with modern aesthetics and smooth user interactions. Features elegant animations, responsive design, and optimized performance for excellent user experience.',
@@ -48,6 +64,22 @@ const projects = [
         image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop',
         link: '#',
         github: 'https://github.com/akhiakter25556'
+    },
+    {
+        title: 'Fresh Flower Shop',
+        description: 'A beautiful and responsive flower shop website with elegant design and smooth user experience. Features product showcase, shopping functionality, and modern web design principles.',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+        image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&h=300&fit=crop',
+        link: 'https://akhiakter25556.github.io/freshFlower/',
+        github: 'https://github.com/akhiakter25556/freshFlower'
+    },
+    {
+        title: 'Ruhi Buiya Portfolio',
+        description: 'A professional portfolio website showcasing creative work and projects. Built with modern design principles, featuring smooth animations and responsive layout for optimal user experience.',
+        tags: ['React', 'CSS3', 'JavaScript', 'Portfolio Design'],
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
+        link: 'https://2-ruhi-buiya.vercel.app/',
+        github: 'https://github.com/akhiakter25556/ruhi-buiya-portfolio'
     }
 ];
 
