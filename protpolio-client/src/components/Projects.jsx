@@ -45,7 +45,7 @@ const projects = [
   title: 'Smart Inventory & Order Management System',
   description: 'Built a Smart Inventory & Order Management System using TypeScript, Node.js, and Next.js. Manage products, categories, stock levels, and customer orders with proper validation and workflow handling.',
   tags: ['Next.js', 'Node.js', 'TypeScript', 'MongoDB', 'Full-Stack'],
-  image: 'https://images.unsplash.com/photo-1581091012184-7f92e56b7e97?w=400&h=300&fit=crop',
+  image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop',
   link: 'https://l-msystemproject-92x9.vercel.app/',
   github: 'https://github.com/akhiakter25556/LMsystemproject.git'
 },
