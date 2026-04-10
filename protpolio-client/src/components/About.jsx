@@ -1,22 +1,41 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload } from 'react-icons/fa';
-import { SiReact, SiNextdotjs, SiTypescript } from 'react-icons/si';
+import { SiAdobephotoshop, SiAdobepremierepro, SiAdobeillustrator, SiFigma } from 'react-icons/si';
 
 const About = () => {
-  // আইকনগুলোর ডেটা এবং তাদের শুরুর পজিশন (ডিগ্রি হিসেবে)
   const circularIcons = [
-    { icon: <SiReact className="text-[#61DAFB] text-3xl" />, bg: "#1a1a1a", delay: 0, degree: 0 },
-    { icon: <SiNextdotjs className="text-black text-3xl" />, bg: "white", delay: 0, degree: 90 },
-    { icon: <SiTypescript className="text-[#3178C6] text-3xl" />, bg: "#00273f", delay: 0, degree: 180 },
-    { icon: <span className="font-serif font-bold text-2xl text-white">AI</span>, bg: "#f29111", delay: 0, degree: 270 },
+    { 
+      icon: <SiAdobephotoshop className="text-[#66B2FF] text-2xl" />, 
+      bg: "rgba(255,255,255,0.06)", 
+      style: { top: '4%', left: '50%', transform: 'translateX(-50%)' },
+      animate: { y: [0, -15, 0] } // Vertical floating
+    },
+    { 
+      icon: <SiAdobepremierepro className="text-[#8B5CF6] text-2xl" />, 
+      bg: "rgba(255,255,255,0.06)", 
+      style: { top: '50%', right: '4%', transform: 'translateY(-50%)' },
+      animate: { x: [0, 15, 0] } // Horizontal floating
+    },
+    { 
+      icon: <SiAdobeillustrator className="text-[#FF9A00] text-2xl" />, 
+      bg: "rgba(255,255,255,0.06)", 
+      style: { bottom: '4%', left: '50%', transform: 'translateX(-50%)' },
+      animate: { y: [0, 15, 0] } // Vertical floating
+    },
+    { 
+      icon: <SiFigma className="text-[#F24E1E] text-2xl" />, 
+      bg: "rgba(255,255,255,0.06)", 
+      style: { top: '50%', left: '4%', transform: 'translateY(-50%)' },
+      animate: { x: [0, -15, 0] } // Horizontal floating
+    },
   ];
 
   return (
-    <section className="min-h-screen bg-[#070b15] text-white py-20 px-6 relative overflow-hidden font-sans">
-      
+    <section id="about" className="min-h-screen bg-[#070b15] text-white py-20 px-6 relative overflow-hidden font-sans">
+
       {/* Background Grid Pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#1e293b 1px, transparent 1px), linear-gradient(90deg, #1e293b 1px, transparent 1px)`,
@@ -25,58 +44,56 @@ const About = () => {
       />
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
-        
-        {/* LEFT SIDE: Circular Motion Visuals */}
-        <div className="relative flex justify-center items-center h-[500px]">
-          
-          {/* Main Orbit Path (Invisible Circle) */}
-          <motion.div 
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="relative w-80 h-80 rounded-full border border-dashed border-white/5 flex items-center justify-center"
-          >
-            {circularIcons.map((item, index) => (
-              <div
-                key={index}
-                className="absolute"
-                style={{
-                  transform: `rotate(${item.degree}deg) translateX(160px)`, // 160px হলো কক্ষপথের দূরত্ব
-                }}
-              >
-                {/* আইকনগুলো যাতে নিজের জায়গায় উল্টো না হয়ে যায় তাই বিপরীত দিকে ঘুরানো হয়েছে */}
-                <motion.div 
-                   animate={{ rotate: -360 }} 
-                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                   className="p-4 rounded-xl border border-white/10 shadow-2xl flex items-center justify-center"
-                   style={{ background: item.bg, width: '60px', height: '60px' }}
-                >
-                  {item.icon}
-                </motion.div>
-              </div>
-            ))}
-          </motion.div>
 
-          {/* Center Content (Static) */}
-          <div className="absolute z-20">
-            <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="w-56 h-56 rounded-full flex flex-col items-center justify-center shadow-[0_0_60px_rgba(139,92,246,0.4)]"
-              style={{
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
-                border: '4px solid rgba(255,255,255,0.1)'
+        {/* LEFT SIDE: Glassy Icon Cards */}
+        <div className="relative flex justify-center items-center h-[500px]">
+          <div
+            className="absolute inset-0 rounded-3xl border border-white/5 bg-black/20 backdrop-blur-xl"
+            style={{ boxShadow: 'inset 0 0 80px rgba(255,255,255,0.04)' }}
+          />
+
+          <div className="absolute inset-0 opacity-40 pointer-events-none" style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '70px 70px'
+          }} />
+
+          {circularIcons.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: 1,
+                ...item.animate // This spreads the specific floating movement
               }}
+              transition={{ 
+                opacity: { duration: 0.6, delay: 0.12 * index },
+                // Infinite floating animation settings:
+                default: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.2 // Staggered start for smoother effect
+                }
+              }}
+              whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
+              className="absolute rounded-3xl border border-white/10 backdrop-blur-2xl flex items-center justify-center shadow-[0_18px_50px_rgba(0,0,0,0.25)] z-20"
+              style={{ width: '72px', height: '72px', background: item.bg, ...item.style }}
             >
-              <h2 className="text-5xl font-bold tracking-tighter">03+</h2>
-              <p className="text-[10px] uppercase tracking-[0.3em] font-semibold opacity-90 mt-1">
-                Years Active
-              </p>
+              {item.icon}
             </motion.div>
+          ))}
+
+          <div className="relative w-[340px] h-[340px] flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full border border-cyan-400/20 blur-xl" />
+            <div className="absolute inset-8 rounded-full border border-white/10" />
+            <div className="relative w-56 h-56 rounded-full bg-[#0f172a] border border-cyan-400/15 shadow-[0_0_80px_rgba(34,211,238,0.14)] flex flex-col items-center justify-center">
+              <p className="text-5xl font-black tracking-tight text-white">03+</p>
+              <span className="text-xs uppercase tracking-[0.35em] text-cyan-300 mt-2">Years Active</span>
+            </div>
           </div>
 
-          {/* Glowing Background Glows */}
-          <div className="absolute w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px]" />
+          <div className="absolute w-[380px] h-[380px] rounded-full border border-cyan-500/10 opacity-20" />
+          <div className="absolute w-[260px] h-[260px] rounded-full border border-violet-500/10 opacity-30" />
         </div>
 
         {/* RIGHT SIDE: Content */}
@@ -86,7 +103,7 @@ const About = () => {
               <span className="h-[1px] w-8 bg-cyan-400"></span>
               <p className="text-cyan-400 text-xs font-bold uppercase tracking-[0.3em]">Full Stack Developer</p>
             </div>
-            
+
             <h1 className="text-6xl md:text-7xl font-black tracking-tighter leading-[0.9]">
               AKHI AKTER <br />
               <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent italic">
@@ -96,7 +113,7 @@ const About = () => {
           </div>
 
           <p className="text-slate-400 text-lg leading-relaxed max-w-xl">
-             I am <span className="text-white font-bold italic">Akhi Akter Ruhi</span>, a passionate Full Stack Developer specializing in building scalable web applications. With 3+ years of experience, I blend code and creativity to deliver seamless digital experiences.
+            I am <span className="text-white font-bold italic">Akhi Akter Ruhi</span>, a passionate Full Stack Developer specializing in building scalable web applications. With 3+ years of experience, I blend code and creativity to deliver seamless digital experiences.
           </p>
 
           <div className="grid grid-cols-2 gap-8 py-8 border-y border-white/10">
@@ -111,7 +128,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-8 pt-4">
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#7c3aed] hover:bg-[#6d28d9] text-white px-8 py-4 rounded-full font-bold text-sm shadow-[0_10px_20px_rgba(124,58,237,0.3)]"
