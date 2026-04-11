@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
@@ -19,17 +18,17 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         // Create email content
         const subject = `Portfolio Contact from ${formData.name}`;
         const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-        
+
         // Create mailto link
         const mailtoLink = `mailto:ruhiakterakhi@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-        
+
         // Open email client
         window.location.href = mailtoLink;
-        
+
         // Reset form
         setFormData({
             name: '',
@@ -126,42 +125,42 @@ const Contact = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     required
-                                    className="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:border-accent text-white placeholder-gray-500" 
-                                    placeholder="Your Name" 
+                                    className="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:border-accent text-white placeholder-gray-500"
+                                    placeholder="Your Name"
                                 />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                                <input 
-                                    type="email" 
+                                <input
+                                    type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
                                     required
-                                    className="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:border-accent text-white placeholder-gray-500" 
-                                    placeholder="Your Email" 
+                                    className="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:border-accent text-white placeholder-gray-500"
+                                    placeholder="Your Email"
                                 />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                                <textarea 
-                                    rows="4" 
+                                <textarea
+                                    rows="4"
                                     name="message"
                                     value={formData.message}
                                     onChange={handleInputChange}
                                     required
-                                    className="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:border-accent text-white placeholder-gray-500 resize-none" 
+                                    className="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:border-accent text-white placeholder-gray-500 resize-none"
                                     placeholder="Your Message"
                                 ></textarea>
                             </div>
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 className="w-full py-3 bg-accent text-primary font-bold rounded-lg hover:bg-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25"
                             >
                                 Send Message

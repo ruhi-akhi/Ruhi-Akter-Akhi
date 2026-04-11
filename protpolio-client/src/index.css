@@ -36,7 +36,7 @@ body {
 
 /* Hero background */
 .hero-bg {
-  background-image: url('/src/assets/hero-bg.jpg');
+  background-image: url('./assets/heroImage_1.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -108,7 +108,12 @@ textarea:focus {
 }
 
 /* Professional typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   font-weight: 700;
 }

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import img from '../assets/profationalimg.jpg';
 import { resumeData } from '../data/resumeData';
 

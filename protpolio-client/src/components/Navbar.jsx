@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FaBars, FaTimes, FaMoon, FaSun, FaFacebookF, FaLinkedinIn, FaInstagram, FaGithub } from 'react-icons/fa';
 import { HiArrowRight } from 'react-icons/hi'; // Added for the button arrow
 

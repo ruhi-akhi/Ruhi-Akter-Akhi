@@ -1,31 +1,30 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaDownload } from 'react-icons/fa';
 import { SiAdobephotoshop, SiAdobepremierepro, SiAdobeillustrator, SiFigma } from 'react-icons/si';
 
 const About = () => {
   const circularIcons = [
-    { 
-      icon: <SiAdobephotoshop className="text-[#66B2FF] text-2xl" />, 
-      bg: "rgba(255,255,255,0.06)", 
+    {
+      icon: <SiAdobephotoshop className="text-[#66B2FF] text-2xl" />,
+      bg: "rgba(255,255,255,0.06)",
       style: { top: '4%', left: '50%', transform: 'translateX(-50%)' },
       animate: { y: [0, -15, 0] } // Vertical floating
     },
-    { 
-      icon: <SiAdobepremierepro className="text-[#8B5CF6] text-2xl" />, 
-      bg: "rgba(255,255,255,0.06)", 
+    {
+      icon: <SiAdobepremierepro className="text-[#8B5CF6] text-2xl" />,
+      bg: "rgba(255,255,255,0.06)",
       style: { top: '50%', right: '4%', transform: 'translateY(-50%)' },
       animate: { x: [0, 15, 0] } // Horizontal floating
     },
-    { 
-      icon: <SiAdobeillustrator className="text-[#FF9A00] text-2xl" />, 
-      bg: "rgba(255,255,255,0.06)", 
+    {
+      icon: <SiAdobeillustrator className="text-[#FF9A00] text-2xl" />,
+      bg: "rgba(255,255,255,0.06)",
       style: { bottom: '4%', left: '50%', transform: 'translateX(-50%)' },
       animate: { y: [0, 15, 0] } // Vertical floating
     },
-    { 
-      icon: <SiFigma className="text-[#F24E1E] text-2xl" />, 
-      bg: "rgba(255,255,255,0.06)", 
+    {
+      icon: <SiFigma className="text-[#F24E1E] text-2xl" />,
+      bg: "rgba(255,255,255,0.06)",
       style: { top: '50%', left: '4%', transform: 'translateY(-50%)' },
       animate: { x: [0, -15, 0] } // Horizontal floating
     },
@@ -61,11 +60,11 @@ const About = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0 }}
-              animate={{ 
+              animate={{
                 opacity: 1,
                 ...item.animate // This spreads the specific floating movement
               }}
-              transition={{ 
+              transition={{
                 opacity: { duration: 0.6, delay: 0.12 * index },
                 // Infinite floating animation settings:
                 default: {

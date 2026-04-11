@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 const Resume = () => {
     const handlePrint = () => {
         window.print();
@@ -115,8 +113,8 @@ Graduated: February 2025
                 <section className="mb-8">
                     <h3 className="text-xl font-bold text-blue-800 border-b-2 border-blue-600 pb-2 mb-4">CAREER OBJECTIVE</h3>
                     <p className="text-justify leading-relaxed">
-                        Full Stack Developer skilled in building scalable, responsive web applications using the MERN and Next.js ecosystems. 
-                        Proficient in React.js, Next.js, Node.js, and MongoDB, with hands-on experience creating secure, full-stack projects using 
+                        Full Stack Developer skilled in building scalable, responsive web applications using the MERN and Next.js ecosystems.
+                        Proficient in React.js, Next.js, Node.js, and MongoDB, with hands-on experience creating secure, full-stack projects using
                         JWT and OAuth authentication. Strong ability to design, follow clean code practices, and work with modern web tools.
                     </p>
                 </section>
@@ -155,7 +153,7 @@ Graduated: February 2025
                 {/* Projects */}
                 <section className="mb-8">
                     <h3 className="text-xl font-bold text-blue-800 border-b-2 border-blue-600 pb-2 mb-4">PROJECTS</h3>
-                    
+
                     <div className="space-y-6">
                         <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-600">
                             <h4 className="font-bold text-blue-700 text-lg mb-2">1. E-commerce With Next.js</h4>

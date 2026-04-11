@@ -1,8 +1,11 @@
 // Simple script to create a PDF version of the resume
 // This is a placeholder - in a real scenario, you would use a tool like Puppeteer or similar
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // For now, we'll create a simple text-based resume that can be downloaded
 const resumeContent = `

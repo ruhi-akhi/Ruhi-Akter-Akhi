@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaTwitter, FaRegCommentDots } from 'react-icons/fa';
 
 const testimonials = [
@@ -52,7 +51,7 @@ const Testimonials = () => {
                             <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)' }}>SIGNALS.</span>
                         </h2>
                     </div>
-                    
+
                     <div className="text-right pb-2">
                         <h3 className="text-4xl font-bold text-white/10 tracking-widest">TRUST_0.98</h3>
                         <p className="text-[10px] tracking-[0.2em] text-slate-500 italic">DECODING SATISFACTION LEVELS...</p>
@@ -62,10 +61,10 @@ const Testimonials = () => {
 
             {/* Infinite Scroll Container */}
             <div className="flex relative">
-                <motion.div 
+                <motion.div
                     className="flex gap-6 pr-6"
                     animate={{ x: ["0%", "-50%"] }}
-                    transition={{ 
+                    transition={{
                         x: {
                             repeat: Infinity,
                             repeatType: "loop",
@@ -75,7 +74,7 @@ const Testimonials = () => {
                     }}
                 >
                     {scrollItems.map((item, index) => (
-                        <div 
+                        <div
                             key={index}
                             className="w-[350px] md:w-[450px] flex-shrink-0 bg-[#0d0d10] border border-white/5 p-8 rounded-[2rem] relative group hover:border-white/20 transition-all duration-500"
                         >
@@ -108,7 +107,7 @@ const Testimonials = () => {
                         </div>
                     ))}
                 </motion.div>
-                
+
                 {/* Gradient Fades for the edges */}
                 <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
