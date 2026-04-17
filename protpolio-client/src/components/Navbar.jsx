@@ -26,7 +26,7 @@ const Navbar = () => {
         { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/in/akhi-akter-578880396/' },
         { icon: <FaInstagram />, href: '#' }, // Add Instagram link here if you have one
         { icon: <FaFacebookF />, href: 'https://www.facebook.com/akhi.akter.751291' },
-        { icon: <FaGithub />, href: 'https://github.com/akhiakter25556' },
+        { icon: <FaGithub />, href: 'https://github.com/ruhi-akhi' },
     ];
 
     return (
